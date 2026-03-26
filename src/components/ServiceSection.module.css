@@ -1,0 +1,122 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: calc(100vh - 72px);
+}
+
+.serviceButton {
+  background-color: var(--color-light);
+  border: none;
+  border-right: 5px solid var(--color-navy);
+  border-bottom: 5px solid var(--color-navy);
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+}
+
+.serviceButton:nth-child(odd) {
+  border-left: 5px solid var(--color-navy);
+}
+
+.serviceButton:nth-child(-n+2) {
+  border-top: 5px solid var(--color-navy);
+}
+
+.card {
+  background-color: var(--color-white);
+  border: 5px solid var(--color-navy);
+  border-radius: 8px;
+  width: 60%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-navy);
+  transition: background-color 0.1s ease;
+}
+
+.serviceBlurb {
+  font-size: 1rem;
+  color: var(--color-navy);
+  margin-top: 1rem;
+  font-family: var(--font-schibsted), sans-serif;
+  width: 80%;
+}
+
+.card:hover {
+  background-color: var(--color-accent);
+}
+
+.content {
+  max-width: 600px;
+  padding: 3rem 3rem 0rem 3rem;
+}
+
+.content h2 {
+  font-size: 2rem;
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-family: var(--font-vollkorn), serif;
+  font-weight: 100;
+  font-size: 1rem;
+  color: var(--color-navy);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    height: calc(100vh - 60px);
+  }
+
+  .card {
+    border-radius: 5px;
+  }
+
+
+  .serviceBlurb {
+    display: none;
+  }
+
+  .serviceButton {
+    border-left: 0px solid var(--color-navy);
+    border-right: 0px solid var(--color-navy);
+    border-bottom: 4px solid var(--color-navy);
+    border-top: none;
+  }
+
+  .serviceButton:nth-child(odd) {
+    border-left: 0px solid var(--color-navy);
+  }
+
+  .serviceButton:nth-child(-n+2) {
+    border-top: none;
+  }
+
+  .serviceButton:first-child {
+    border-top: 5px solid var(--color-navy);
+  }
+
+  .card {
+    width: 85%;
+    height: 75%;
+  }
+
+  .content {
+    padding: 2rem 1.5rem 0rem 1.5rem;
+  }
+}

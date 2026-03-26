@@ -1,0 +1,83 @@
+.section {
+  max-width: 600px;
+  padding: 2rem 3rem 5rem 3rem;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--color-navy);
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.label {
+  font-size: 1rem;
+  color: var(--color-navy);
+}
+
+.input,
+.textarea {
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--color-contrast);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: var(--font-schibsted), sans-serif;
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  width: 100%;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-navy);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--color-contrast);
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.button {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border: none;
+  padding: 0.85rem;
+  font-size: 1rem;
+  font-family: var(--font-schibsted), sans-serif;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: var(--color-navy);
+}
+
+.confirmation {
+  color: var(--color-navy);
+  font-size: 1rem;
+  padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    max-width: 100%;
+    padding: 2rem 1.5rem 4rem 1.5rem;
+  }
+}

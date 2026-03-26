@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "cv": "cv",
+    "contact": "contact"
+  },
+  "services": {
+    "translation": "Translation",
+    "audioDescription": "Audio Description",
+    "subtitling": "Subtitling",
+    "editing": "Editing"
+  },
+  "serviceBlurbs": {
+  "translation": "Fusce dapibus, tellus ac cursus commodo.",
+  "audioDescription": "Sed posuere consectetur est at lobortis.",
+  "subtitling": "Etiam porta sem malesuada magna mollis euismod.",
+  "editing": "Integer posuere erat a ante venenatis dapibus."
+  },
+  "serviceContent": {
+  "translation": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in.",
+  "audioDescription": "Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo.",
+  "subtitling": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui.",
+  "editing": "Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Name",
+    "surname": "Surname",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Submit",
+    "sent": "Caramba!"
+  }
+}

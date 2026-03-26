@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "cv": "cv",
+    "contact": "contact"
+  },
+  "services": {
+    "translation": "Translation",
+    "audioDescription": "Audio Description",
+    "subtitling": "Subtitling",
+    "editing": "Editing"
+  },
+  "serviceBlurbs": {
+  "translation": "Many languages",
+  "audioDescription": "Film · TV · Super",
+  "subtitling": "Guidelines · Beauty",
+  "editing": "Chef · Boss · Pro"
+  },
+  "serviceContent": {
+  "translation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed tempus sem. Duis malesuada congue neque, nec condimentum diam ultrices sit amet. Etiam a egestas ligula, quis varius erat.",
+  "audioDescription": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.",
+  "subtitling": "Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.",
+  "editing": "Nullam varius, turpis molestie dictum semper, diam lectus aliquam ligula, at euismod urna quam vitae turpis. Proin tincidunt, nulla in interdum malesuada, arcu enim gravida velit, vel faucibus velit nunc nec dui."
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Name",
+    "surname": "Surname",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Submit",
+    "sent": "Thank you chef"
+  }
+}
