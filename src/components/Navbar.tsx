@@ -67,11 +67,24 @@ export default function Navbar() {
           <button
             className={styles.contactLink}
             onClick={() => {
-            const el = document.getElementById('contact');
-            if (!el) return;
-            const navbarHeight = 72;
-            const top = el.getBoundingClientRect().top + window.scrollY - navbarHeight;
+            const isHome =
+              pathname === `/${locale}` ||
+              pathname === `/${locale}/`;
+
+            if (isHome) {
+              const el = document.getElementById('contact');
+              if (!el) return;
+
+              const navbarHeight = 72;
+              const top =
+              el.getBoundingClientRect().top +
+              window.scrollY -
+              navbarHeight;
+
             smoothScrollTo(top, 800);
+            } else {
+              router.push(`/${locale}#contact`);
+            }
           }}
         >
           {t('contact')}
