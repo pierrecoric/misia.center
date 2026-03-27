@@ -13,16 +13,40 @@ export default function ContactForm() {
     email: '',
     message: '',
   });
-  const [submitted, setSubmitted] = useState(false);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    // No backend yet — just show confirmation for now
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setError(data.error || 'Something went wrong.');
+        return;
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -81,8 +105,16 @@ export default function ContactForm() {
             />
           </div>
 
-          <button className={styles.button} onClick={handleSubmit}>
-            {t('submit')}
+          {error && (
+            <p className={styles.error}>{error}</p>
+          )}
+
+          <button
+            className={styles.button}
+            onClick={handleSubmit}
+            disabled={loading}
+          >
+            {loading ? '...' : t('submit')}
           </button>
         </div>
       )}

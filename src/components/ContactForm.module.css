@@ -66,13 +66,18 @@
 }
 
 .button:hover {
-  background-color: var(--color-navy);
+  background-color: var(--color-accent);
 }
 
 .confirmation {
   color: var(--color-navy);
   font-size: 1rem;
   padding: 2rem 0;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {

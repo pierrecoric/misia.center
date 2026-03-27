@@ -77,6 +77,31 @@
   line-height: 1.7;
 }
 
+.paragraph {
+  font-family: var(--font-vollkorn), serif;
+  font-size: 1rem;
+  color: var(--color-navy);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.segmentHeading {
+  font-family: var(--font-schibsted), sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.segmentBold {
+  font-weight: 700;
+  color: var(--color-navy);
+  padding-left: 1rem;
+}
+
 @media (max-width: 768px) {
 
   .grid {
@@ -115,6 +140,10 @@
   .card {
     width: 85%;
     height: 75%;
+  }
+
+  .segmentBold {
+    padding-left: 0;
   }
 
   .content {

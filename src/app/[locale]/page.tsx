@@ -4,6 +4,20 @@ import { redirect } from 'next/navigation';
 import ServiceSection from '@/components/ServiceSection';
 import ContactForm from '@/components/ContactForm';
 
+
+async function getServiceContent(locale: string) {
+  const map: Record<string, () => Promise<{ serviceContent: import('@/data/services.en').ServiceContent }>> = {
+    en: () => import('@/data/services.en'),
+    pl: () => import('@/data/services.pl'),
+    es: () => import('@/data/services.es'),
+    nl: () => import('@/data/services.nl'),
+  };
+
+  const loader = map[locale] ?? map['en'];
+  const module = await loader();
+  return module.serviceContent;
+}
+
 export default async function HomePage({
   params,
   searchParams,
@@ -19,19 +33,13 @@ export default async function HomePage({
   }
 
   const t = await getTranslations();
+  const content = await getServiceContent(locale);
 
   const services = {
     translation: t('services.translation'),
     audioDescription: t('services.audioDescription'),
     subtitling: t('services.subtitling'),
     editing: t('services.editing'),
-  };
-
-  const content = {
-    translation: t('serviceContent.translation'),
-    audioDescription: t('serviceContent.audioDescription'),
-    subtitling: t('serviceContent.subtitling'),
-    editing: t('serviceContent.editing'),
   };
 
   const blurbs = {

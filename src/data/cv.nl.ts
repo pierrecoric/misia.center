@@ -17,7 +17,7 @@ export type CVSection = {
 
 export const cv: CVSection[] = [
   {
-    title: 'Education',
+    title: 'Experience',
     items: [
       {
         title: 'Lorem ipsum dolor sit amet',
@@ -34,7 +34,7 @@ export const cv: CVSection[] = [
     ],
   },
   {
-    title: 'Experience',
+    title: 'Education',
     items: [
       {
         title: 'Ut Enim Ad Minim Veniam',
@@ -68,36 +68,36 @@ export const cv: CVSection[] = [
     ],
   },
   {
-    title: 'Publications',
+    title: 'Skills',
     items: [
       {
-        title: { text: 'Donec Ullamcorper Nulla', url: 'https://example.com' },
-        date: '2022',
-        place: 'Non Metus Auctor Fringilla',
+        title: 'genius',
+        date: '',
+        place: '',
         description: 'Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.',
       },
       {
-        title: 'Cum Sociis Natoque',
-        date: '2020',
-        place: { text: 'Penatibus et Magnis', url: 'https://example.com' },
-        description: 'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus.',
+        title: 'best person',
+        date: '',
+        place: '',
+        description: 'the best',
       },
     ],
   },
   {
-    title: 'Awards',
+    title: 'Languages',
     items: [
       {
-        title: 'Nullam Varius Turpis',
-        date: '2021',
-        place: 'Molestie Dictum Semper',
-        description: 'Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus.',
+        title: 'Polish',
+        date: '',
+        place: '',
+        description: '',
       },
       {
-        title: { text: 'Diam Lectus Aliquam', url: 'https://example.com' },
-        date: '2019',
-        place: 'Ligula at Euismod',
-        description: 'Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur.',
+        title: 'Spanish',
+        date: '',
+        place: '',
+        description: ''
       },
     ],
   },

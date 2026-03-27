@@ -3,14 +3,19 @@
 import { useRef } from 'react';
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 import styles from './ServiceSection.module.css';
+import { ServiceParagraph } from '@/data/services.en';
+
 
 type Service = 'translation' | 'audioDescription' | 'subtitling' | 'editing';
 
+
 type Props = {
   services: Record<Service, string>;
-  content: Record<Service, string>;
+  content: Record<Service, ServiceParagraph[]>;
   blurbs: Record<Service, string>;
 };
+
+
 
 function smoothScrollTo(target: number, duration: number) {
   const start = window.scrollY;
@@ -78,11 +83,25 @@ export default function ServiceSection({ services, content, blurbs }: Props) {
       </div>
 
       {selected && (
-        <div ref={contentRef} className={styles.content}>
-          <h2>{services[selected]}</h2>
-          <p>{content[selected]}</p>
-        </div>
-      )}
+  <div className={styles.contentWrapper}>
+    <div ref={contentRef} className={styles.content}>
+      <h2>{services[selected]}</h2>
+      {content[selected].map((paragraph, pIndex) => (
+  <p key={pIndex} className={styles.paragraph}>
+    {paragraph.map((segment, sIndex) => {
+      if (segment.type === 'heading') {
+        return <span key={sIndex} className={styles.segmentHeading}>{segment.content}</span>;
+      }
+      if (segment.type === 'bold') {
+        return <span key={sIndex} className={styles.segmentBold}>{segment.content}</span>;
+      }
+      return <span key={sIndex}>{segment.content}</span>;
+    })}
+  </p>
+))}
+    </div>
+  </div>
+)}
     </section>
   );
 }
