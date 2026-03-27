@@ -4,24 +4,24 @@
     "contact": "contact"
   },
   "services": {
-    "translation": "Translation",
-    "audioDescription": "Audio Description",
-    "subtitling": "Subtitling",
+    "translation": "Translation and revision",
+    "audioDescription": "Audio description",
+    "subtitling": "Subtitles and surtitles",
     "editing": "Editing"
   },
   "serviceBlurbs": {
-  "translation": "Fusce dapibus, tellus ac cursus commodo.",
-  "audioDescription": "Sed posuere consectetur est at lobortis.",
-  "subtitling": "Etiam porta sem malesuada magna mollis euismod.",
-  "editing": "Integer posuere erat a ante venenatis dapibus."
+  "translation": "Many languages",
+  "audioDescription": "Film · TV · Super",
+  "subtitling": "Guidelines · Beauty",
+  "editing": "Chef · Boss · Pro"
   },
   "contact": {
-    "title": "Contact",
+    "title": "Contact me",
     "name": "Name",
     "surname": "Surname",
     "email": "Email",
     "message": "Message",
     "submit": "Submit",
-    "sent": "Caramba!"
+    "sent": "Thank you chef"
   }
 }

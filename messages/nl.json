@@ -4,9 +4,9 @@
     "contact": "contact"
   },
   "services": {
-    "translation": "Translation",
-    "audioDescription": "Audio Description",
-    "subtitling": "Subtitling",
+    "translation": "Translation and revision",
+    "audioDescription": "Audio description",
+    "subtitling": "Subtitles and surtitles",
     "editing": "Editing"
   },
   "serviceBlurbs": {
@@ -16,12 +16,12 @@
   "editing": "Chef · Boss · Pro"
   },
   "contact": {
-    "title": "Contact",
+    "title": "Contact me",
     "name": "Name",
     "surname": "Surname",
     "email": "Email",
     "message": "Message",
     "submit": "Submit",
-    "sent": "Niet de bedeoling"
+    "sent": "Thank you chef"
   }
 }
