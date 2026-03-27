@@ -42,6 +42,23 @@
   font-size: 0.95rem;
 }
 
+.contactLink {
+  background: none;
+  border: none;
+  color: var(--color-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-family: var(--font-schibsted), sans-serif;
+  cursor: pointer;
+  padding: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.contactLink:hover {
+  text-decoration: underline;
+}
+
 .navLinks a:hover {
   text-decoration: underline;
 }

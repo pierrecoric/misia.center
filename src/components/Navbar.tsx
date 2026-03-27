@@ -64,7 +64,18 @@ export default function Navbar() {
       <div className={styles.rightSection}>
         <div className={styles.navLinks}>
           <a href={`/${locale}/cv`}>{t('cv')}</a>
-          <a href={`/${locale}#contact`} className={styles.contactLink}>{t('contact')}</a>
+          <button
+            className={styles.contactLink}
+            onClick={() => {
+            const el = document.getElementById('contact');
+            if (!el) return;
+            const navbarHeight = 72;
+            const top = el.getBoundingClientRect().top + window.scrollY - navbarHeight;
+            smoothScrollTo(top, 800);
+          }}
+        >
+          {t('contact')}
+        </button>
         </div>
 
         <div className={styles.languageSwitcher}>
