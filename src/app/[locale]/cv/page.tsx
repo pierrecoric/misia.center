@@ -1,6 +1,10 @@
-import { useLocale } from 'next-intl';
 import CVSection from '@/components/CVSection';
 import styles from './cv.module.css';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Misia Halwa - CV',
+};
 
 async function getCVData(locale: string) {
   const cvMap: Record<string, () => Promise<{ cv: import('@/data/cv.en').CVSection[] }>> = {

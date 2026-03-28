@@ -3,8 +3,13 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import '../globals.css';
 import Navbar from '@/components/Navbar';
-
 import { Schibsted_Grotesk, Vollkorn } from 'next/font/google';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'misia.center',
+  description: 'Translation, Audio Description, Subtitling, Editing',
+};
 
 const schibsted = Schibsted_Grotesk({
   subsets: ['latin'],

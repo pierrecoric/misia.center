@@ -12,7 +12,6 @@ type Service = 'translation' | 'audioDescription' | 'subtitling' | 'editing';
 type Props = {
   services: Record<Service, string>;
   content: Record<Service, ServiceParagraph[]>;
-  blurbs: Record<Service, string>;
 };
 
 
@@ -38,7 +37,7 @@ function smoothScrollTo(target: number, duration: number) {
 
 const validServices: Service[] = ['translation', 'audioDescription', 'subtitling', 'editing'];
 
-export default function ServiceSection({ services, content, blurbs }: Props) {
+export default function ServiceSection({ services, content }: Props) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -75,33 +74,30 @@ export default function ServiceSection({ services, content, blurbs }: Props) {
             <div className={styles.card}>
               {services[key]}
             </div>
-            <div className={styles.serviceBlurb}>
-              {blurbs[key]}
-            </div>
           </button>
         ))}
       </div>
 
       {selected && (
-  <div className={styles.contentWrapper}>
-    <div ref={contentRef} className={styles.content}>
-      <h2>{services[selected]}</h2>
-      {content[selected].map((paragraph, pIndex) => (
-  <p key={pIndex} className={styles.paragraph}>
-    {paragraph.map((segment, sIndex) => {
-      if (segment.type === 'heading') {
-        return <span key={sIndex} className={styles.segmentHeading}>{segment.content}</span>;
-      }
-      if (segment.type === 'bold') {
-        return <span key={sIndex} className={styles.segmentBold}>{segment.content}</span>;
-      }
-      return <span key={sIndex}>{segment.content}</span>;
-    })}
-  </p>
-))}
-    </div>
-  </div>
-)}
+        <div className={styles.contentWrapper}>
+          <div ref={contentRef} className={styles.content}>
+            <h2>{services[selected]}</h2>
+            {content[selected].map((paragraph, pIndex) => (
+              <p key={pIndex} className={styles.paragraph}>
+                {paragraph.map((segment, sIndex) => {
+                  if (segment.type === 'heading') {
+                    return <span key={sIndex} className={styles.segmentHeading}>{segment.content}</span>;
+                  }
+                  if (segment.type === 'bold') {
+                    return <span key={sIndex} className={styles.segmentBold}>{segment.content}</span>;
+                  }
+                  return <span key={sIndex}>{segment.content}</span>;
+                })}
+              </p>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 }

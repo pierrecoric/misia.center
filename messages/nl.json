@@ -9,12 +9,6 @@
     "subtitling": "Subtitles and surtitles",
     "editing": "Editing"
   },
-  "serviceBlurbs": {
-  "translation": "Many languages",
-  "audioDescription": "Film · TV · Super",
-  "subtitling": "Guidelines · Beauty",
-  "editing": "Chef · Boss · Pro"
-  },
   "contact": {
     "title": "Contact me",
     "name": "Name",
@@ -22,6 +16,6 @@
     "email": "Email",
     "message": "Message",
     "submit": "Submit",
-    "sent": "Thank you chef"
+    "sent": "Thank you, your message has been submitted."
   }
 }

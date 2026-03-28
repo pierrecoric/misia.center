@@ -18,14 +18,24 @@ export default function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
+  function isValidEmail(email: string): boolean {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setLoading(true);
     setError(null);
+
+    if (!isValidEmail(formData.email)) {
+      setError('Please enter a valid email address.');
+      return;
+    }
+
+    setLoading(true);
 
     try {
       const response = await fetch('/api/contact', {

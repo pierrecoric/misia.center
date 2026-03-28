@@ -42,17 +42,11 @@ export default async function HomePage({
     editing: t('services.editing'),
   };
 
-  const blurbs = {
-    translation: t('serviceBlurbs.translation'),
-    audioDescription: t('serviceBlurbs.audioDescription'),
-    subtitling: t('serviceBlurbs.subtitling'),
-    editing: t('serviceBlurbs.editing'),
-  };
 
   return (
     <main>
       <Suspense>
-        <ServiceSection services={services} content={content} blurbs={blurbs} />
+        <ServiceSection services={services} content={content} />
       </Suspense>
       <ContactForm />
     </main>
