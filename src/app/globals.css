@@ -16,3 +16,14 @@ body {
   font-family: var(--font-schibsted), sans-serif;
   background-color: var(--color-light);
 }
+
+@media print {
+  nav {
+    display: none;
+  }
+
+  body {
+    background-color: white;
+    color: black;
+  }
+}

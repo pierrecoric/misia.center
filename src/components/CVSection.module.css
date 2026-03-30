@@ -24,3 +24,20 @@
     border-bottom: 4px solid var(--color-navy);
   }
 }
+
+@media print {
+  .section {
+    padding: 1rem 0;
+    border-bottom: 1px solid black;
+    break-inside: avoid;
+  }
+
+  .section:last-child {
+    border-bottom: none;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+}

@@ -58,3 +58,39 @@
     max-width: 100%;
   }
 }
+
+@media print {
+  .item {
+    padding: 0.5rem 0;
+    break-inside: avoid;
+  }
+
+  .meta {
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: 0.9rem;
+  }
+
+  .date {
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  .place {
+    font-size: 0.9rem;
+  }
+
+  .title a,
+  .place a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    max-width: 100%;
+    line-height: 1.5;
+  }
+}

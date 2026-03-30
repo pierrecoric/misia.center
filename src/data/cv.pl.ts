@@ -48,6 +48,12 @@ export const cv: CVSection[] = [
         place: 'Aliquip Ex Ea Commodo',
         description: 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Proin vel ante a orci tempus eleifend ut et magna.',
       },
+      {
+        title: 'Doctor Honoris Causa',
+        date: '',
+        place: 'Maya the Boat Independant University',
+        description: 'For general amazingness',
+      },
     ],
   },
   {
@@ -81,6 +87,41 @@ export const cv: CVSection[] = [
         date: '',
         place: '',
         description: 'the best',
+      },
+      {
+        title: 'menu generator',
+        date: '',
+        place: '',
+        description: 'the best as well',
+      },
+      {
+        title: 'Sharp mind',
+        date: '',
+        place: '',
+        description: 'so sharp',
+      },
+    ],
+  },
+  {
+    title: 'Awards',
+    items: [
+      {
+        title: 'Grand Champion',
+        date: '',
+        place: '',
+        description: 'Simply the best',
+      },
+      {
+        title: 'Nobel Price of Humor',
+        date: '',
+        place: '',
+        description: 'outstanding jokes'
+      },
+      {
+        title: 'World Food Prize',
+        date: '',
+        place: '',
+        description: 'Outstanding achievement in advancement of human development through improved food quality, quantity, or availability'
       },
     ],
   },

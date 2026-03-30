@@ -9,3 +9,15 @@
     padding: 2rem 1.5rem;
   }
 }
+
+@media print {
+  .main {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
